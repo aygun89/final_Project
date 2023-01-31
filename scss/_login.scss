@@ -1,0 +1,72 @@
+.content-login {
+  margin: 180px 0 100px 0;
+  font-family: $mainFont;
+  h1 {
+    font-family: $tertiaryFont;
+    margin-bottom: 20px;
+  }
+  input {
+    border-top: none;
+    border-left: none;
+    margin-bottom: 20px;
+  }
+  .lgn-btns {
+    text-align: center;
+    .lgn {
+      background-color: black;
+      border: none;
+      padding: 10px 50px;
+      border-radius: 20px;
+      margin: 15px 0;
+    }
+    p {
+      color: grey;
+    }
+    .first-a {
+      margin-bottom: 25px;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      border-radius: 10px;
+    }
+    .apple {
+      background-color: black;
+      padding: 10px 25px;
+      span {
+        margin-left: 15px;
+      }
+    }
+    .fb {
+      background-color: rgb(73, 73, 182);
+      padding: 10px 15px;
+      span {
+        margin-left: 5px;
+      }
+    }
+    .create {
+      margin-top: 30px;
+      a {
+        color: black;
+        font-weight: 400;
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+  .img-lgn {
+    text-align: center;
+    img {
+      width: 70%;
+      height: auto;
+    }
+    @include mQuery("tablet") {
+      display: none;
+    }
+  }
+  .leftSide-lgn {
+    @include mQuery("mobile") {
+      padding-left: 30px;
+    }
+  }
+}

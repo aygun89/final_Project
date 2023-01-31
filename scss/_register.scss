@@ -1,0 +1,50 @@
+.content-register {
+  margin: 180px 0 100px 0;
+  font-family: $mainFont;
+  h1 {
+    font-family: $tertiaryFont;
+    font-size: 50px;
+    margin-bottom: 20px;
+    @include mQuery("mobile") {
+      font-size: 35px;
+    }
+  }
+  input {
+    border-top: none;
+    border-left: none;
+    margin-bottom: 20px;
+  }
+  .check-out {
+    color: black;
+  }
+  .register-btns {
+    button {
+      background-color: black;
+      border-radius: 20px;
+      border: none;
+      padding: 8px 25px;
+      margin: 15px 0;
+    }
+    button:hover {
+      background-color: black;
+    }
+    a {
+      color: black;
+    }
+  }
+  .img-register {
+    text-align: center;
+    img {
+      width: 70%;
+      height: auto;
+    }
+    @include mQuery("tablet") {
+      display: none;
+    }
+  }
+  .leftSide-register {
+    @include mQuery("mobile") {
+      padding-left: 30px;
+    }
+  }
+}

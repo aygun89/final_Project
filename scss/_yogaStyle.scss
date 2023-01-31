@@ -1,0 +1,39 @@
+.content {
+  margin: 250px 100px 150px 100px;
+  font-family: $mainFont;
+  @include mQuery("tablet") {
+    margin: 200px 30px 100px 30px;
+  }
+  @include mQuery("mobile") {
+    margin: 200px 20px 100px 20px;
+  }
+  h1 {
+    font-size: 65px;
+    margin-bottom: 50px;
+    @include mQuery("tablet") {
+      font-size: 40px;
+    }
+    @include mQuery("mobile") {
+      font-size: 25px;
+    }
+  }
+  h4 {
+    font-size: 30px;
+    margin-bottom: 30px;
+    @include mQuery("tablet") {
+      font-size: 22px;
+    }
+    @include mQuery("mobile") {
+      font-size: 18px;
+    }
+  }
+  p {
+    font-size: 20px;
+    @include mQuery("tablet") {
+      font-size: 18px;
+    }
+    @include mQuery("mobile") {
+      font-size: 16px;
+    }
+  }
+}

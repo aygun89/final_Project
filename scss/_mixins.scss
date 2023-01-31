@@ -1,0 +1,17 @@
+@mixin mQuery($point) {
+  @if ($point== "mobile") {
+    @media screen and (max-width: 576px) {
+      @content;
+    }
+  }
+  @if ($point== "tablet") {
+    @media screen and (max-width: 992px) {
+      @content;
+    }
+  }
+  @if ($point== "large") {
+    @media screen and (min-width: 992px) {
+      @content;
+    }
+  }
+}

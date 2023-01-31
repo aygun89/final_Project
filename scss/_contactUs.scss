@@ -1,0 +1,35 @@
+.contentForm {
+  margin: 200px 0 100px 0;
+  font-family: $mainFont;
+  width: 700px;
+  h1 {
+    margin-bottom: 30px;
+  }
+  input {
+    border-top: none;
+    border-left: none;
+  }
+  .txtarea {
+    margin-top: 10px;
+    border-color: lightgray;
+  }
+  .btn-form {
+    padding: 5px 25px;
+    background-color: black;
+    border: none;
+    border-radius: 15px;
+    margin-top: 10px;
+  }
+}
+@include mQuery("tablet") {
+  .contentForm {
+    width: 500px;
+    margin: 200px 0 100px 0;
+  }
+}
+@include mQuery("mobile") {
+  .contentForm {
+    width: 350px;
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,367 @@
+@import "variables";
+@import "mixins";
+@import "_yogaStyle";
+@import "contactUs";
+@import "login";
+@import "register";
+
+.nav-colored {
+  background-color: #fff;
+  box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
+  transition: background-color 200ms linear;
+}
+.nav-transparent {
+  background-color: transparent;
+}
+
+body {
+  position: relative;
+}
+// header starts
+header {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: $sectionMar;
+  z-index: 2;
+  transition: all 0.2s ease-in-out;
+  .navbar {
+    font-family: $mainFont;
+    padding: 20px 50px;
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    .naming {
+      display: flex;
+      img {
+        height: 60px;
+        width: 60px;
+      }
+      .name {
+        display: flex;
+        align-items: center;
+        padding-top: 15px;
+        margin-left: 5px;
+        font-weight: 500;
+        font-size: 26px;
+        font-family: "Poppins", sans-serif;
+        .go {
+          color: #cfafc6;
+        }
+        .yoga {
+          color: $primary-color;
+        }
+      }
+    }
+    .login {
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      border: none;
+      background-color: transparent;
+      font-weight: 500;
+      margin-right: 30px;
+      background-color: $primary-color;
+      border-radius: 20px;
+      padding: 10px 25px;
+      @include mQuery("mobile") {
+        font-size: 12px;
+        padding: 5px 15px;
+        border-radius: 15px;
+      }
+    }
+    .btn-outline {
+      background-color: $primary-color;
+      font-weight: 500;
+      border-radius: 20px;
+      a {
+        @include mQuery("mobile") {
+          font-size: 12px;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}
+// intro section starts
+#intro {
+  padding: $sectionPad;
+  font-family: $mainFont;
+  margin: $sectionMar;
+  overflow: hidden;
+  @include mQuery("mobile") {
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .intro {
+    display: flex;
+  }
+  .left-side {
+    margin-top: 180px;
+    padding: 0 20px;
+    h1 {
+      font-size: 60px;
+      font-family: $secondaryFont;
+      margin: 100px 0 70px 0;
+      @include mQuery("mobile") {
+        font-size: 40px;
+      }
+    }
+    p {
+      font-family: $mainFont;
+      font-size: 20px;
+      font-weight: 300;
+      margin-bottom: 60px;
+    }
+    button {
+      background-color: $primary-color;
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: none;
+    }
+  }
+  .right-side {
+    img {
+      width: 100%;
+      height: 900px;
+      @include mQuery("tablet") {
+        display: none;
+      }
+    }
+  }
+}
+// about section starts
+#about {
+  display: flex;
+  padding: $sectionPad;
+  margin: $sectionMar;
+  @include mQuery("tablet") {
+    display: block;
+  }
+  .left-side {
+    font-family: $secondaryFont;
+  }
+  .right-side {
+    font-family: $mainFont;
+    font-weight: 300;
+  }
+}
+// classes section starts
+#classes {
+  margin: $sectionMar;
+  h4 {
+    font-family: $mainFont;
+    font-weight: 500;
+    margin-bottom: 40px;
+  }
+  .card {
+    font-family: $mainFont;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    .img {
+      .level {
+        opacity: 0.6;
+        position: relative;
+        span {
+          color: white;
+          background-color: black;
+          padding: 2px 5px;
+          border-radius: 5px;
+          font-size: 12px;
+        }
+        .lvl {
+          position: absolute;
+          bottom: 5px;
+          left: 10px;
+        }
+        .time {
+          position: absolute;
+          bottom: 5px;
+          left: 70px;
+        }
+      }
+    }
+    .master {
+      color: $grey;
+      font-weight: 300;
+    }
+    .card-text {
+      font-weight: 300;
+      display: none;
+    }
+  }
+  .col-class {
+    position: relative;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .card:hover {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    overflow-x: hidden;
+    transform: scale(1.02);
+    transition-duration: 3s;
+    box-shadow: 15px 25px 70px -5px rgba(0, 0, 0, 0.07);
+    .card-text {
+      display: block;
+    }
+  }
+}
+// styles section starts
+#styles {
+  margin: $sectionMar;
+  .styles-card {
+    position: relative;
+    span {
+      color: #fff;
+      background-color: black;
+      opacity: 0.5;
+      border-radius: 10px;
+      padding: 0 5px;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      font-size: 14px;
+    }
+  }
+}
+// membership section starts
+#membership {
+  margin: $sectionMar;
+  padding: $sectionPad;
+  .membership {
+    display: flex;
+    justify-content: space-around;
+    font-family: $mainFont;
+    @include mQuery("tablet") {
+      display: block;
+    }
+  }
+  .bestValue {
+    background-color: #cbd7ee;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 15px;
+  }
+  h3 {
+    margin: 10px 0 10px 0;
+    font-weight: 400;
+  }
+  .firstP {
+    position: relative;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    .span1 {
+      font-size: 24px;
+      position: absolute;
+      top: 35px;
+      left: -15px;
+    }
+
+    .span2 {
+      font-size: 100px;
+      font-weight: 500;
+    }
+    .span3 {
+      font-weight: 500;
+      font-size: 50px;
+      position: absolute;
+      top: 15px;
+      left: 110px;
+    }
+    .span4 {
+      position: absolute;
+      bottom: 30px;
+      left: 190px;
+    }
+  }
+  .secondP {
+    font-size: 12px;
+  }
+  .leftside-membership {
+    @include mQuery("tablet") {
+      margin-bottom: 50px;
+    }
+    @include mQuery("mobile") {
+      padding: 0 30px;
+    }
+  }
+  .rightside-membership {
+    h3 {
+      padding-top: 25px;
+    }
+    @include mQuery("mobile") {
+      padding: 0 30px;
+    }
+  }
+}
+#membership:hover {
+  .leftside-membership,
+  .rightside-membership {
+    transform: scale(1.2);
+    transition-duration: 3s;
+  }
+}
+// footer starts
+#footer {
+  width: auto;
+  background-color: #f6e3e3;
+  font-family: $mainFont;
+  p {
+    font-size: 16px;
+    line-height: 160%;
+  }
+  h4 {
+    font-size: 24px;
+    line-height: 160%;
+    margin: 6px 0 45px 0;
+  }
+  ul {
+    display: block;
+    padding: 20px;
+  }
+  .footnav1 {
+    margin-top: 50px;
+    li a {
+      color: rgb(77, 74, 74);
+      text-decoration: none;
+    }
+    li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    li:last-child {
+      margin-bottom: 50px;
+    }
+  }
+  .footnav2,
+  .footnav3,
+  .footnav4 {
+    @extend .footnav1;
+  }
+  .footnav4 {
+    .sosial-media {
+      justify-content: flex-start;
+      a {
+        margin-right: 10px;
+      }
+    }
+  }
+  .copyright {
+    border-top: 1px solid lightgray;
+    p {
+      text-align: center;
+      margin: 30px auto;
+    }
+  }
+}
